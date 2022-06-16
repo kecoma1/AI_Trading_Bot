@@ -1,2 +1,6 @@
 # AI_Trading_Bot
-Repository where I will be developing the videos about how to create a trading bot that uses AI.
+Repositorio donde desarrollare los videos sobre como crear un bot de trading que use **Inteligencia artificial**.
+Repository where I will be developing the videos about how to create a trading bot that uses **Artificial Inteligence**.
+
+Check out my youtube Channel!
+https://www.youtube.com/channel/UCWpGnaeyh0nmB-ltvp6FxIg
