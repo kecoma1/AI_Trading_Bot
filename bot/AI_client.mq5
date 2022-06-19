@@ -121,6 +121,8 @@ void OnTick() {
       SocketSend(socket, req, len);
       
       sent = true;
+      
+      EventSetTimer(PeriodSeconds());
    }
 }
 
