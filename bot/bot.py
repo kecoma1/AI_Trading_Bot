@@ -1,6 +1,6 @@
 import MetaTrader5 as mt5
 import threading
-import Data
+import Data, orders
 
 class Bot:
     
@@ -28,13 +28,13 @@ class Bot:
         t.start()
         print('Thread - DATA. LAUNCHED')
 
-    # def thread_orders_AI(self):
-    #     """Function to launch the thread for sending orders."""
-    #     t = threading.Thread(target=orders.thread_orders_AI, 
-    #                          args=(self.pill2kill, self.data, self.trading_data))
-    #     self.threads.append(t)
-    #     t.start()
-    #     print('Thread - ORDERS. LAUNCHED')
+    def thread_orders_AI(self):
+        """Function to launch the thread for sending orders."""
+        t = threading.Thread(target=orders.thread_orders_AI, 
+                             args=(self.pill2kill, self.data, self.trading_data))
+        self.threads.append(t)
+        t.start()
+        print('Thread - ORDERS. LAUNCHED')
     
     def kill_threads(self):
         """Function to kill all the loaded threads."""
@@ -46,7 +46,7 @@ class Bot:
     def start(self):
         """Function to start all the threads"""
         self.thread_data()
-        # self.thread_orders_AI()
+        self.thread_orders_AI()
     
     def wait(self):
         """Function to make the thread wait."""
