@@ -68,7 +68,7 @@ print('La red neuronal acerto en su predicción en el: %.2f'%(result*100) + '%')
 
 # Training the neural network
 # Entrenando la Red neuronal
-nn.fit(X, y)
+nn = nn.fit(X, y)
 
 # Saving the model
 # Guardando el modelo
