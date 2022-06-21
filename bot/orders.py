@@ -21,8 +21,8 @@ def close_position(market: str, lotage: float, result):
     position = mt5.positions_get(ticket=deal.position_id)[0]
     close_order = {
         'action': mt5.TRADE_ACTION_DEAL,
-        'type': mt5.ORDER_TYPE_SELL,
-        'price': mt5.symbol_info_tick(market).bid,
+        'type': mt5.ORDER_TYPE_BUY,
+        'price': mt5.symbol_info_tick(market).ask,
         'symbol': position.symbol,
         'volume': position.volume,
         'position': position.ticket,
